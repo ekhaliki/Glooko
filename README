@@ -1,0 +1,55 @@
+****************
+* You need more sugar
+* Glooko
+* 04/28/15
+* Ehsan Khaliki
+****************
+
+OVERVIEW:
+
+ Reads a hash file which contains glucose reading for a patient.
+ Allows a heath care professional access a patients glucose readings.
+
+
+INCLUDED FILES:
+
+ PatientDriver.java - The driver class that a patient need to use
+ ProfessionalMain.java - The driver class that the health care professional needs to use
+ ReadingsController.java - The class that represents a patient and their glucose readings
+ ReadingModel.java - The class that represent a single glucose reading
+ Parser.java - The file that parses a simple hash containing the glucose readings
+ README - this file
+
+BUILDING AND RUNNING:
+
+ To run as a patient:
+ $ javac PatientDriver.java
+ $ java PatientDriver
+
+ to run as a health care professional:
+ $ javac ProfessionalMain.java
+ $ java ProfessionalMain
+
+
+ You will be asked a series of input that are needed for the program to run
+ correctly.
+
+PROGRAM DESIGN:
+
+ The patient first needs to run the program since they are the one giving a
+ health care professionals access to their glucose readings.  The patient driver
+ class is expecting the glucose reading hash files in the correct format and named
+ with their first and last name with no spaces in between.  Then after creating a
+ ReadingsController object the patient is asked for which health care professional they
+ want to share the readings.  After choosing their health care professional the
+ program writes the ReadingsController object to a file.
+
+ The health care professional can run the Professional driver class to view their
+ patients glucose readings.  The driver class asks what the name pf the health care
+ professional is and which patient they want to view the glucose reading for. After
+ if the health care professional has permission the view the patients glucose
+ readings, they get alerts for the low and high glucose readings.
+
+ I wrote the program fairly complex and would need to talk more about the program
+ to fully explain my design choices.  The project uses the patients name to figure
+ out the file names so the patient name needs to be consistent between runs.
